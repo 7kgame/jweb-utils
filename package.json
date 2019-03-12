@@ -1,0 +1,45 @@
+{
+  "name": "jweb-utils",
+  "version": "0.0.1",
+  "description": "utils for jweb include http, md5, hash etc.",
+  "main": "build/index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "build/**/*.js",
+    "types/*.d.ts"
+  ],
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7kgame/jweb-utils.git"
+  },
+  "keywords": [
+    "utils",
+    "jweb",
+    "http",
+    "md5",
+    "hash"
+  ],
+  "author": "cyij2006@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/7kgame/jweb-utils/issues"
+  },
+  "homepage": "https://github.com/7kgame/jweb-utils#readme",
+  "dependencies": {
+    "request": "^2.88.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "@types/request": "^2.48.1",
+    "@types/xml2js": "^0.4.3"
+  },
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  }
+}
