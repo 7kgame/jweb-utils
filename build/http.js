@@ -28,6 +28,10 @@ function request(method, url, params, options) {
             }
             options[bodyKey] = params || (jsonBody ? true : null);
             Request[caller](url, options, (err, res, body) => {
+                if (err && (!res || !res.statusCode)) {
+                    reject({ code: (res && res.statusCode) || -1, err, body });
+                    return;
+                }
                 const code = res.statusCode;
                 if (code >= 400 && code < 600) {
                     reject({ code, err, body });
