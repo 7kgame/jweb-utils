@@ -9,6 +9,16 @@ function toQueryString(params, sep1 = '=', sep2 = '&', encode) {
         .join(sep2);
 }
 exports.toQueryString = toQueryString;
+function getObjectType(obj) {
+    if (obj === null) {
+        return 'null';
+    }
+    if (obj === undefined) {
+        return 'undefined';
+    }
+    return Object.prototype.toString.call(obj).match(/^\[object (.*)\]$/)[1].toLowerCase();
+}
+exports.getObjectType = getObjectType;
 function generateNoceStr(length = 16) {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let noceStr = '', maxPos = chars.length;

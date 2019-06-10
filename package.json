@@ -1,6 +1,6 @@
 {
   "name": "jweb-utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "utils for jweb include http, md5, hash etc.",
   "main": "build/index.js",
   "typings": "types/index.d.ts",
@@ -9,6 +9,7 @@
     "types/*.d.ts"
   ],
   "scripts": {
+    "build": "tsc",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -34,9 +35,9 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "@types/node": "^10.12.18",
+    "@types/node": "^12.0.7",
     "@types/request": "^2.48.1",
-    "@types/xml2js": "^0.4.3"
+    "@types/xml2js": "^0.4.4"
   },
   "engines": {
     "node": ">= 10.0.0",

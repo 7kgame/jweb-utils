@@ -8,6 +8,16 @@ export function toQueryString (params: object, sep1: string = '=', sep2: string 
     .join(sep2)
 }
 
+export function getObjectType(obj) {
+  if (obj === null) {
+    return 'null'
+  }
+  if (obj === undefined) {
+    return 'undefined'
+  }
+  return Object.prototype.toString.call(obj).match(/^\[object (.*)\]$/)[1].toLowerCase()
+}
+
 export function generateNoceStr(length: number = 16): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
   let noceStr = '', maxPos = chars.length
