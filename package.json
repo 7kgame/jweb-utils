@@ -1,6 +1,6 @@
 {
   "name": "jweb-utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "utils for jweb include http, md5, hash etc.",
   "main": "build/index.js",
   "typings": "types/index.d.ts",
